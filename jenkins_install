@@ -1,0 +1,12 @@
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+
+cd /etc/apt
+sudo echo "## Jenkins Binary Source" >> sources.list
+sudo echo "deb https://pkg.jenkins.io/debian-stable binary/
+
+sudo apt update
+sudo apt install jenkins
+
+cd /var/lib/jenkins
+java -jar jenkins.war --http8443 &
+
