@@ -5,7 +5,7 @@ sudo echo "## Jenkins Binary Source" >> sources.list
 sudo echo "deb https://pkg.jenkins.io/debian-stable binary/" >> sources.list
 
 sudo apt update
-sudo apt install jenkins
+sudo apt -y install jenkins
 
 cd /var/lib/jenkins
 java -jar jenkins.war --http8443
