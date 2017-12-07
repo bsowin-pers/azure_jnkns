@@ -9,5 +9,5 @@ sudo apt-get update
 if ( $sudo apt-get -y install jenkins); then
   cd /usr/share/jenkins
   sudo service jenkins stop
-  java -jar jenkins.war --http8443
+  sudo java -jar jenkins.war --http8443
 fi
